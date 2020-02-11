@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Código do Papai</title>
+</head>
+
+<style>
+    form {
+        /*colocar a tela no meionho*/
+        margin: 0 auto;
+        width: 500px;
+        border: 1px solid #cccccc;
+        border-radius: 0px 30px 0px 30px;
+        padding: 10x;
+        background-color: red;
+    }
+    
+    form div+div {
+        margin-top: 25px;
+    }
+    
+    label {
+        width: 90px;
+        text-align: end;
+        display: inline-block;
+    }
+    
+    textarea {
+        font: 12px small-caps;
+        width: 300px;
+        border: 1px solid teal;
+        box-sizing: border-box;
+        border-radius: 3px;
+        vertical-align: top;
+        height: 50px;
+    }
+    /*input {
+        width: 50px;
+        border: 1px solid teal;
+    }*/
+    
+    h3 {
+        text-align: center;
+    }
+    
+    body {
+        /*background-color: yellow;*/
+    }
+    
+    button {
+        margin-left: 340px;
+    }
+    
+    #poder input {
+        width: 50px;
+    }
+</style>
+
+
+<body>
+
+    <div id="form_contato">
+        <form action="contato.php" method="GET">
+            <div name=" titulo ">
+                <h3>PokeSystem</h3>
+            </div>
+            <div name="nome">
+                <label>Nome:</label>
+                <input type="text" id="nome_cliente" placeholder="Digite seu Nome">
+            </div>
+            <div name="tipo">
+                <label>Tipo:</label>
+                <select name="select" id="selection_type">
+                <option value="Selecione">Selecione</option>           
+                <option value="ELETRICO">ELETRICO</option> 
+                <option value="FOGO">FOGO</option>
+                <option value="ÁGUA">AGUA</option>
+                <option value="TERRA">TERRA</option>
+                <option value="GELO">GELO</option>
+                <option value="PSIQUICO">PSIQUICO</option>
+                <option value="PLANTA">PLANTA</option>
+            </select>
+            </div>
+
+
+
+            <div name="poder">
+
+                <div name="Ataque">
+                    <label>Ataque:</label>
+                    <input type="number" id="atk_points" placeholder="0-100">
+                    <label>Evoluido</label>
+
+
+
+                </div>
+
+                <div name="Defesa">
+                    <label>Defesa:</label>
+                    <input type="number" id="def_points" placeholder="0-100">
+                    <label>sim</label>
+                    <input type="radio" name="sim">
+                    <label>não</label>
+                    <input type="radio" name="sim">
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div name="Descrição">
+                <label>Descrição:</label>
+                <textarea id="mensagem_cliente" placeholder="Escreva aqui"></textarea>
+
+            </div>
+            <div name="botao">
+                <button id="Salva">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
