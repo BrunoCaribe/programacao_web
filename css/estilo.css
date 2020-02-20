@@ -1,0 +1,46 @@
+form {
+    /*colocar a tela no meionho*/
+    margin: 0 auto;
+    width: 400px;
+    border: 1px solid #cccccc;
+    border-radius: 1cm;
+    padding: 10px;
+    background-color: yellow;
+}
+
+form div+div {
+    margin-top: 10px;
+}
+
+label {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+}
+
+textarea {
+    font: 12px small-caps;
+    width: 300px;
+    border: 1px solid teal;
+    box-sizing: border-box;
+    border-radius: 3px;
+    vertical-align: top;
+    height: 100px;
+}
+
+input {
+    width: 299px;
+    border: 1px solid teal;
+}
+
+h3 {
+    text-align: center;
+}
+
+body {
+    /*background-color: yellow;*/
+}
+
+button {
+    margin-left: 330px;
+}
