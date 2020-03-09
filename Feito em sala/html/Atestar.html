@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Teste Do Negao</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+
+
+    <table class="table table-dark">
+
+        <tr>
+            <th>Adicionar Clientes</th>
+        </tr>
+
+
+
+        <tr>
+            <td>Nome:<input type="text" id="nome_cliente" placeholder="Digite seu Nome"> </td>
+            <td>Email :<input type="text" id="email_cliente" placeholder="Digite seu Email"></td>
+            <td>Idade :<input type="text" id="idade_cliente" placeholder="Digite sua Idade"> </td>
+            <td>Pais : <input type="text" id="pais_cliente" placeholder="Digite seu Pais de origem"></td>
+            <td><button id="teste" type="button" class="btn btn-success" onclick="insertNewRecord()"> Criar</button></td>
+        </tr>
+
+        <tr>
+            <table class="list table table-dark" id="add_cliente">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Idade</th>
+                        <th>Pais</th>
+                        <th>Ações</th>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>Joao</td>
+                        <td>@email.com</td>
+                        <td>34</td>
+                        <td>Brasil</td>
+                        <td id="options">
+                            <button id="details" class="btn btn-success " style='font-size:15px; color: white'>Detalhes <i class='far fa-file'></i></button>
+                            <button id="edit" class="btn btn-primary" style='font-size:15px; color: white'>Editar <i class='fas fa-edit' ></i></button>
+                            <button id="delete" type="button" class="btn btn-danger" style="font-size:15px">Deletar <i class="fa fa-trash"></i></button>
+
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </tr>
+
+
+
+
+
+    </table>
+
+
+    <script>
+        function insertNewRecord() {
+
+            var nome = document.getElementById("nome_cliente").value
+            var idade = document.getElementById("idade_cliente").value
+            var email = document.getElementById("email_cliente").value
+            var pais = document.getElementById("pais_cliente").value
+
+
+            document.getElementById("teste").innerHTML = "YOU CLICKED ME!";
+            var table = document.getElementsByTagName('table')[1].getElementsByTagName('tbody')[0];
+            var novaLinha = table.insertRow(table.length);
+            cell1 = novaLinha.insertCell(0);
+            cell1.innerHTML = nome;
+            cell2 = novaLinha.insertCell(1);
+            cell2.innerHTML = idade;
+            cell3 = novaLinha.insertCell(2);
+            cell3.innerHTML = email;
+            cell4 = novaLinha.insertCell(3);
+            cell4.innerHTML = pais;
+            cell4 = novaLinha.insertCell(4);
+            cell4.innerHTML = document.createElement("button")
+
+
+        }
+    </script>
+
+</body>
+
+
+</html>

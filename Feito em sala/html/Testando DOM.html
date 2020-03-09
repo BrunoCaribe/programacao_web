@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKK EAE HTML </title>
+
+</head>
+
+<body>
+    <input type="text" id="nomePessoa" placeholder="Nome:">
+    <input type="text" id="linkPerfil" placeholder="Link do perfil">
+    <button onclick="additem()">adicionar item </button>
+    <ul id="listaPerfil"> </ul>
+
+</body>
+
+<script>
+    var listaPerfil = document.getElementById("listaPerfil")
+    var nomePessoa = document.getElementById("nomePessoa")
+    var linkPerfil = document.getElementById("linkPerfil")
+
+    function additem() {
+        if (nomePessoa.value && linkPerfil) {
+            var item = document.createElement("li")
+            var link = document.createElement("a")
+            link.innerHTML = nomePessoa.value
+            link.setAttribute("href", linkPerfil.value)
+            item.appendChild(link)
+            listaPerfil.appendChild(item)
+        }
+    }
+</script>
+
+
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
