@@ -12,16 +12,6 @@ function adicionarNome(tentativas) {
 
 
 
-/**function adicionarTentativas(tentativas) {
-
-    var tabela = document.getElementsByTagName('table')[0]
-    var novaLinha = tabela.insertRow(tabela.length)
-    celula1 = novaLinha.insertCell(0)
-    celula1.innerHTML = "Você já tentou "
-    celula1 = novaLinha.insertCell(1)
-    celula1.innerHTML = tentativas
-
-}**/
 
 
 
@@ -29,6 +19,7 @@ function reset() {
 
     document.getElementById("nomeJogador1").value = ""
     document.getElementById("numeroDigitado").value = ""
+    document.getElementById("numeroAdivinhar").value = ""
     tentativas = 0
 
 }
@@ -75,13 +66,13 @@ function verificar2() {
         numeroAdivinhar = document.getElementById("numeroAdivinhar")
 
     } else if ((numeroDigitado > numeroAdvinhar)) {
-        alert("VOCE ERRRRRRRROOOOOOU... TENTE NOVAMENTE!, Seu lançe foi muito alto ");
+        alert("VOCE ERRRRRRRROOOOOOU... TENTE NOVAMENTE!, Seu lance foi muito alto ");
         tentativas++
         var n = adicionarNome(tentativas)
 
 
     } else if ((numeroDigitado < numeroAdvinhar)) {
-        alert("VOCE ERRRRRRRROOOOOOU... TENTE NOVAMENTE!, Seu lançe foi muito baixo ");
+        alert("VOCE ERRRRRRRROOOOOOU... TENTE NOVAMENTE!, Seu lance foi muito baixo ");
         tentativas++
         var n = adicionarNome(tentativas)
 
